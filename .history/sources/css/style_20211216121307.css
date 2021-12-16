@@ -546,7 +546,6 @@ footer {
     padding-left: 20px;
   }
 
-  #blog #menu a,
   #menu a {
     display: none;
   }
@@ -679,11 +678,9 @@ footer {
     text-transform: uppercase;
     text-shadow: 1px 1px 0px #000;
   }
-  #blog .topnav ul li a,
   #home .topnav ul li a {
     display: block;
   }
-  #blog #menu a,
   #menu a,
   #home #menu a {
     display: none;

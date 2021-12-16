@@ -394,11 +394,6 @@ body {
   margin-bottom: 10px;
 }
 
-.continue {
-  text-decoration: underline;
-  float: right;
-}
-
 /* SINGLE POST STYLE  and CONTACT PAGE with SIDEBAR*/
 #singlepost,
 #sidebar,
@@ -546,11 +541,9 @@ footer {
     padding-left: 20px;
   }
 
-  #blog #menu a,
   #menu a {
     display: none;
   }
-  #blog .topnav,
   .topnav {
     width: 100%;
     grid-area: menu;
@@ -560,12 +553,10 @@ footer {
     top: 10vh;
   }
 
-  #blog .topnav ul li,
   .topnav ul li {
     display: block;
     width: 100%;
   }
-  #blog .topnav ul li a,
   .topnav ul li a {
     display: block;
     text-align: center;
@@ -592,14 +583,6 @@ footer {
   }
   #art-3 {
     grid-area: art3;
-  }
-  #blog #articles {
-    grid-area: articles;
-    margin-top: 0;
-    width: 95%;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
   }
   #derniers-articles article {
     display: block;
@@ -651,7 +634,6 @@ footer {
     text-transform: uppercase;
     text-shadow: 1px 1px 0px #000;
   }
-  #blog .topnav,
   .topnav {
     margin-top: 0;
     min-height: 100px;
@@ -660,17 +642,14 @@ footer {
     position: relative;
     top: 20px;
   }
-  #blog .topnav ul,
   .topnav ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
   }
-  #blog .topnav ul li,
   .topnav ul li {
     width: auto;
   }
-  #blog .topnav ul li a,
   .topnav ul li a {
     color: #fff;
     font-family: LeagueGothic, sans-serif;
@@ -679,11 +658,9 @@ footer {
     text-transform: uppercase;
     text-shadow: 1px 1px 0px #000;
   }
-  #blog .topnav ul li a,
   #home .topnav ul li a {
     display: block;
   }
-  #blog #menu a,
   #menu a,
   #home #menu a {
     display: none;

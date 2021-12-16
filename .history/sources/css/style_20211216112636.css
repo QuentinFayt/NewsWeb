@@ -177,8 +177,7 @@ body {
   color: #b82924;
 }
 
-#menu a,
-#blog #menu a {
+#menu a {
   display: block;
   color: #fff;
   font-size: 1.5em;
@@ -193,8 +192,7 @@ body {
   gap: 10px;
 }
 
-.topnav.responsive ul li a,
-#blog .topnav.responsive ul li a {
+.topnav.responsive ul li a {
   display: block;
   height: 2em;
   border: 2px solid white;
@@ -202,7 +200,6 @@ body {
   width: 50vw;
   line-height: 2em;
 }
-#blog .topnav.responsive #menu a,
 .topnav.responsive #menu a {
   border: 2px solid transparent;
   margin-top: 10px;
@@ -346,19 +343,36 @@ body {
 }
  */
 /************* B L O G    S T Y L E  &   C O N T A C T   P A G E *****************************/
+#articles,
+#sidebar {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  zoom: 1;
+}
 #blog section,
 #contact section {
   margin: 30px 0 0 10px;
 }
+#sidebar,
+#contat #sidebar {
+  width: 280px;
+  margin: 0 0 0 55px;
+}
 #articles,
 #contactpost {
-  width: 95vw;
+  width: 600px;
   margin: 0 0 40px 0;
 }
 
 /* blog */
+
+#blog li,
+#contact li {
+  list-style-type: square;
+}
 #blog article {
-  width: 100%;
+  width: 580px;
   margin-bottom: 40px;
 }
 #blog footer,
@@ -389,14 +403,52 @@ body {
 }
 #blog article img {
   box-shadow: 0 4px 6px #000;
-  width: 100%;
-  height: auto;
   margin-bottom: 10px;
 }
 
+/* barre latérale */
+
+#sidebar h1,
+#contact #sidebar h1 {
+  font-family: LeagueGothic, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 22px;
+  text-shadow: 1px 1px 0 #000;
+  word-spacing: 2px;
+  margin-bottom: 4px;
+}
+#sidebar li,
+#contact #sidebar li {
+  margin: 0 0 4px 25px;
+  color: #b82924;
+}
+#sidebar li:hover,
+#contact #sidebar li:hover {
+  margin-left: 30px;
+}
+#sidebar li a:hover,
+#contact #sidebar li a:hover {
+  text-decoration: underline;
+}
+
+#blog aside,
+#contact #sidebar aside {
+  margin: 0 0 20px 0;
+}
+
+#cat,
+#archives,
+#contact #sidebar #cat,
+#contact #sidebar #archives {
+  width: 130px;
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  zoom: 1;
+}
 .continue {
   text-decoration: underline;
-  float: right;
 }
 
 /* SINGLE POST STYLE  and CONTACT PAGE with SIDEBAR*/
@@ -546,11 +598,9 @@ footer {
     padding-left: 20px;
   }
 
-  #blog #menu a,
   #menu a {
     display: none;
   }
-  #blog .topnav,
   .topnav {
     width: 100%;
     grid-area: menu;
@@ -560,12 +610,10 @@ footer {
     top: 10vh;
   }
 
-  #blog .topnav ul li,
   .topnav ul li {
     display: block;
     width: 100%;
   }
-  #blog .topnav ul li a,
   .topnav ul li a {
     display: block;
     text-align: center;
@@ -593,28 +641,15 @@ footer {
   #art-3 {
     grid-area: art3;
   }
-  #blog #articles {
-    grid-area: articles;
-    margin-top: 0;
-    width: 95%;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-  }
   #derniers-articles article {
     display: block;
     width: 100%;
     height: auto;
     border: none;
-    padding: 0;
   }
-  #art-2 .rm,
-  #art-3 .rm {
-    width: 50%;
-  }
+
   footer {
     grid-area: footer;
-    width: 100%;
   }
 }
 
@@ -623,8 +658,6 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper {
-    display: block;
-    padding: 20px;
     width: 90%;
     margin: 16px auto;
     box-shadow: 0 4px 6px #000;
@@ -636,10 +669,17 @@ footer {
   }
 
   /************* LOGO & MENU ********************************/
-  #logo {
-    width: 250px;
-    text-align: left;
+  #logo,
+  nav,
+  nav li {
     display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    zoom: 1;
+  }
+
+  #logo {
+    width: 270px;
   }
 
   nav a {
@@ -651,48 +691,29 @@ footer {
     text-transform: uppercase;
     text-shadow: 1px 1px 0px #000;
   }
-  #blog .topnav,
-  .topnav {
-    margin-top: 0;
-    min-height: 100px;
-    max-width: 600px;
+
+  nav {
+    margin: 20px 4px 0 0;
     float: right;
-    position: relative;
-    top: 20px;
   }
-  #blog .topnav ul,
-  .topnav ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
+
+  header {
+    margin-bottom: 25px;
   }
-  #blog .topnav ul li,
-  .topnav ul li {
-    width: auto;
-  }
-  #blog .topnav ul li a,
-  .topnav ul li a {
-    color: #fff;
-    font-family: LeagueGothic, sans-serif;
-    text-decoration: none;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0px #000;
-  }
-  #blog .topnav ul li a,
-  #home .topnav ul li a {
-    display: block;
-  }
-  #blog #menu a,
-  #menu a,
-  #home #menu a {
-    display: none;
-  }
+
   #home a#homenav,
   #blog a#blognav,
   #fullwidth a#fullwidthnav,
   #contact a#contactnav {
     color: #b82924;
+  }
+
+  .topnav ul li a {
+    display: inline-block;
+  }
+
+  #menu a {
+    display: none;
   }
 
   /************* H O M E    C O N T E N T *******************/
@@ -704,36 +725,43 @@ footer {
     color: #f8f8f8;
     text-shadow: 2px 2px 0 #000;
     text-align: center;
-    min-width: 200px;
-    margin: 0 20px;
+
+    width: 20%; /* le titre occupe 20% de la largeur */
   }
 
   #line h1,
   .dline {
-    display: inline-block;
+    /*	display: inline-block;
+	*display: inline;
+	zoom:1;
+	margin: 0 0 0 10px;*/
   }
 
   #line {
+    /*	margin: 0 0 0 80px;*/
     display: flex; /* on aligne le titre et les 2 séparateurs avec flexbox */
     flex-flow: row nowrap; /* en horizontal et sur une ligne */
     justify-content: center; /* éléments centrés horizontalement */
     align-items: center; /* éléments centrés verticalement */
-    height: 50px;
   }
 
   .dline {
+    /*	width: 312px;*/
+    width: 40%; /* les 2 traits à gauche et à droite du titre se partagent les 80% restants (voir #line h1) */
+
     height: 3px;
     background-color: white;
-    width: 100%;
+    /* remplacement de l'image de fond par la couleur pour plus de visibilité */
+    /*background: url('../images/bgdline.png') repeat-x ;*/
+    /*margin-bottom: 10px;*/
   }
 
   #derniers-articles article {
     width: 33%; /* Les 3 articles se partagent toute la largeur */
-    border: none;
-    padding: 0;
   }
 
-  #derniers-articles article h1 {
+  #derniers-articles article h1,
+  #latestp article h1 {
     font-family: LeagueGothic, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
@@ -746,7 +774,8 @@ footer {
   }
 
   #derniers-articles {
-    width: 100%;
+    /*margin: 8px 0 15px 20px;*/
+    /*width: 100%;*/
 
     /* on aligne les 3 articles avec flexbox */
     display: flex;

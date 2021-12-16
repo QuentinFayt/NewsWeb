@@ -755,6 +755,7 @@ footer {
     gap: 20px;
   }
 
+  #articles,
   #derniers-articles img,
   #latestp img {
     margin-bottom: 5px;

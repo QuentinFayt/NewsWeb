@@ -683,7 +683,6 @@ footer {
   #home .topnav ul li a {
     display: block;
   }
-  #blog #menu a,
   #menu a,
   #home #menu a {
     display: none;
